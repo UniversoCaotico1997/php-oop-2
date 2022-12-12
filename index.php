@@ -9,9 +9,11 @@
 // (prodotto, cibo, gioco, cuccia).
 
 require __DIR__ . '/components/product.php';
+require __DIR__ . '/components/category.php';
 
-$cibo = new Product("Detastix", "Utilizzato per migliorare la resistenza dei denti", "Osso per cani", 20, "Cane");
+
+$cibo = new Product("Detastix", "Utilizzato per migliorare la resistenza dei denti", "Osso per cani", 20, new category('Cane'));
 var_dump($cibo);
 
-$gioco = new Product("Rimbalzina", "La palla che non smette di rimbalzare", "palla di plastica", 10, "Gatto");
+$gioco = new Product("Rimbalzina", "La palla che non smette di rimbalzare", "palla di plastica", 10, new category('Gatto'));
 var_dump($gioco);
